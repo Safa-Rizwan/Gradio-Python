@@ -1,5 +1,5 @@
 import gradio as gr
-
+import random
 # Sample 01
 # # greet function
 # def greet(name):
@@ -9,6 +9,8 @@ import gradio as gr
 # ui.launch(share=True)
 
 # Sample 02
+
+
 # With Atrributes
 # greet function
 # def greet(name):
@@ -39,3 +41,10 @@ import gradio as gr
 #     return greeting, round(cels,2)
 # ui = gr.Interface(fn=greet, inputs=['text', 'checkbox', gr.components.Slider(0,100)], outputs=['text', 'number'])
 # ui.launch(share=True)
+
+# Sample 05
+# # Chatbot Interface
+# def random_response(message,history):
+#     return random.choice(['Yes', 'No'])
+# demo = gr.ChatInterface(random_response)
+# demo.launch()
