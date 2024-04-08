@@ -19,12 +19,23 @@ import gradio as gr
 
 # Sample 03 
 # greet function
-def greet(name):
-    return 'Hello '+ name +'!'
+# def greet(name):
+#     return 'Hello '+ name +'!'
 
-with gr.Blocks() as demo:
-    name = gr.Textbox(label='Name:')
-    otpt = gr.Textbox(label='Output:')
-    greet_btn = gr.Button('Greet!')
-    greet_btn.click(fn = greet, inputs=name, outputs=otpt, api_name='greet')
-demo.launch()
+# with gr.Blocks() as demo:
+#     name = gr.Textbox(label='Name:')
+#     otpt = gr.Textbox(label='Output:')
+#     greet_btn = gr.Button('Greet!')
+#     greet_btn.click(fn = greet, inputs=name, outputs=otpt, api_name='greet')
+# demo.launch()
+
+
+# Sample 04
+# greet function
+# def greet(name, is_morning, temp):
+#     msg = 'Good Morning!' if is_morning else 'Good Evening!'
+#     greeting = f'{msg}, Hello {name}! Today temperature is {temp} degrees.'
+#     cels = (temp - 32) * 5/9
+#     return greeting, round(cels,2)
+# ui = gr.Interface(fn=greet, inputs=['text', 'checkbox', gr.components.Slider(0,100)], outputs=['text', 'number'])
+# ui.launch(share=True)
