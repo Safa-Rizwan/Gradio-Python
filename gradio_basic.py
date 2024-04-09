@@ -9,8 +9,6 @@ import random
 # ui.launch(share=True)
 
 # Sample 02
-
-
 # With Atrributes
 # greet function
 # def greet(name):
@@ -48,3 +46,21 @@ import random
 #     return random.choice(['Yes', 'No'])
 # demo = gr.ChatInterface(random_response)
 # demo.launch()
+
+# double tabs
+title = 'Multiple interfaces'
+# greet function
+def greet(name):
+    return 'Hello '+ name +'!'
+
+def user_help(do):
+    return 'Good, you are learning Gradio for ' + do
+
+# interface 1
+tab1 = gr.Interface(greet, 'text', 'text')
+
+# interface 2
+tab2 = gr.Interface(user_help, 'text', 'text')
+
+demo = gr.TabbedInterface([tab1, tab2], ['app1', 'app2'])
+demo.launch()
